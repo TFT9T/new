@@ -4518,14 +4518,14 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendvideo?chat_id=' ..
 end
 
 if text == "سوريا" then
-local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
+local TEXT_SUD = database:get(bot_id..'prox:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
 tdcli_function ({ID = "GetUser",user_id_ = 1950281200,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = '𓌹 ᯓ مــبـرمـج الســورس ★ 𓌺\n['..result.first_name_..'](t.me/siria100)\n'
+local Name = '𓌹 ✭ 𝚃𝙷𝙴 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙼𝙴𝚁 𝙰𝙽𝙳 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙾𝙵 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝚈𝚁𝙸𝙰 𝙸𝚂 𝙰 𝙽𝙸𝙲𝙴 𝙿𝙴𝚁𝚂𝙾𝙽 𝚆𝙸𝚃𝙷 𝙰 𝚂𝙷𝙰𝚁𝙿 𝚃𝙴𝙼𝙿𝙴𝚁. 𝙽𝙾 𝙰𝙿𝙿𝚁𝙾𝙰𝙲𝙷𝙸𝙽𝙶 ♫✭𓌺\n['..result.first_name_..'](t.me/siria100)\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
