@@ -4522,7 +4522,7 @@ local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
-tdcli_function ({ID = "GetUser",user_id_ = 1984200446,},function(arg,result) 
+tdcli_function ({ID = "GetUser",user_id_ = 1950281200,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
 local Name = '𓌹 ᯓ مــبـرمـج الســورس ★ 𓌺\n['..result.first_name_..'](t.me/siria100)\n'
@@ -4540,7 +4540,7 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..m
 else
 sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
  end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1984200446, offset_ = 0, limit_ = 1 }, taha, nil)
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1950281200, offset_ = 0, limit_ = 1 }, taha, nil)
 end,nil)
 end
 end
