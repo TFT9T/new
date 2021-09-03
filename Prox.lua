@@ -4518,7 +4518,7 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendvideo?chat_id=' ..
 end
 
 if text == "سوريا" then
-local TEXT_SUD = DevRio:sismember:get(bot_id..'prox:TEXT_SUDO')
+local TEXT_SUD = DevRio:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
@@ -7356,7 +7356,7 @@ local user_msgs = DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sende
 local user_nkt = tonumber(DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)
 local cont = (tonumber(DevRio:get(Prox..'Rio:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
 local msguser = tonumber(DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_))
-local Texting = {"مو صوره ظيم بالنبي ،🤤💞","مقتنع بصورتك !؟ 😹🖤","ملاك وناسيك بكروبنه ،🤤💞","وفالله ،🤤💞","كشخه برب ،??🤍","لزكت بيها دغيرها عاد ،😒😕","صورتك مامرتاحلها ،🙄😶","حلغوم والله ،🥺💘","مو صوره غنبله براسها ٦٠ حظ ،😹🤍"}
+local Texting = {"مو صوره ظيم بالنبي ،🤤💞","مقتنع بصورتك !؟ 😹🖤","ملاك وناسيك بكروبنه ،🤤💞","وفالله ،🤤💞","كشخه برب ،😉🤍","لزكت بيها دغيرها عاد ،😒😕","صورتك مامرتاحلها ،🙄😶","حلغوم والله ،🥺💘","مو صوره غنبله براسها ٦٠ حظ ،😹🤍"}
 local Description = Texting[math.random(#Texting)]
 if rio.photos_[0] then
 if not DevRio:get(Prox..'Rio:Lock:Id'..msg.chat_id_) then 
