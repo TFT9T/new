@@ -4499,7 +4499,7 @@ DevRio:set(Prox..'Rio:viewget'..msg.sender_user_id_,true)
 Dev_Rio(msg.chat_id_, msg.id_, 1, '᥀︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source Prox     --
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '↫  السورس ᥀' then
 local msg_id = msg.id_/2097152/0.5
 local Text = [[
 ◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ 
@@ -4518,7 +4518,6 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendvideo?chat_id=' ..
 end
 
 if text == "سوريا" then
-local TEXT_SUD = DevRio:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
