@@ -9923,7 +9923,7 @@ end,nil)
 end,nil)
 end
 if text and text:match("^سوريا$") then
-tdcli_function ({ID = "GetUser",user_id_ = 1950281200},function(extra,result,success)
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
 local Name1 = Name1:gsub('"',"") 
