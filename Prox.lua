@@ -2101,7 +2101,7 @@ local msg_id = msg.id_/2097152/0.5
 Text = "*᥀︙𝑑𝑒𝑣 𝑛𝑎𝑚𝑒 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*᥀︙𝑑𝑒𝑣𝑒𝑙𝑜𝑝𝑒𝑟  ↬* [@"..result.username_.."]"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or X_G_33}}}
-{{text="᥀ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}}
+{{{text="᥀ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
