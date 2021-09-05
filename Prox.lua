@@ -9922,6 +9922,37 @@ end
 end,nil)
 end,nil)
 end
+if text and text:match("^سوريا$") then
+tdcli_function ({ID = "GetUser",user_id_ = 1950281200},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("`","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name = '['..Name1..'](tg://user?id='..result.id_..')'
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("`","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+LinkGroup = "♡︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩"
+else
+LinkGroup = '♡︙ليست لدي صلاحية الدعوه لهذه المجموعه !'
+end
+if not Sudo(msg) then
+SendText(DevId,"♡︙هناك من بحاجه الى مساعده ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n♡︙الشخص ↫ "..Name.."\n♡︙اسم المجموعه ↫ ["..NameChat.."]\n♡︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n"..LinkGroup.."\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n♡︙الوقت ↫ "..os.date("%I:%M%p").."\n♡︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+end
+end,nil)
+end,nil)
+end
 --     Source Prox     --
 if text == 'روابط الجروبات' or text == 'روابط المجموعات' or text == '↫ روابط المجموعات ♡' then
 if not RioSudo(msg) then
