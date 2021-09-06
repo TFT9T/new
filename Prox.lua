@@ -3638,7 +3638,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا')
-local ProxTeam = {' قول يسطا انا'..NameBot..' ',' اسمي '..NameBot..' ','  منتا شايف اسمي'..NameBot..' '}
+local ProxTeam = {' قول يسطا انا'..NameBot..' ',' اسمي '..NameBot..' ',' . منتا شايف اسمي'..NameBot..' '}
 DevRio2 = math.random(#ProxTeam) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, ProxTeam[DevRio2] , 1, 'html') 
 return false
@@ -4521,7 +4521,7 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/X_G_33/1469&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == "سوريا" then
+if text == "احمد" then
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
