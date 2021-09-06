@@ -1963,6 +1963,29 @@ end
 DevRio:setex(Prox..'Rio:Start:Time'..msg.sender_user_id_,300,true)
 return false
 end 
+if text == "المطور" or text == "مطور" then
+local TEXT_SUD = DevRio:get(bot_id..'Tshake:TEXT_SUDO')
+if TEXT_SUDO then 
+send(msg.chat_id_, msg.id_,TEXT_SUDO)
+else
+tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
+local function taha(extra, taha, success)
+if taha.photos_[0] then
+local Name = 'المطـــــــــــــــور°\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+keyboard = {} 
+local inline = {
+{{text="♡ المطور .",url="t.me/"..(dp.username_ or "X_G_33")}},
+{{text="♡ السورس .",url="https://t.me/X_G_33"},{text="♡ لتنصيب بوت .",url="https://t.me/siria100"}},{{text="♡ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..tokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+else
+sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+ end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = SUDO, offset_ = 0, limit_ = 1 }, taha, nil)
+end,nil)
+end
+end
 --     Source Prox     --
 if not SecondSudo(msg) and not DevRio:sismember(Prox..'Rio:Ban:Pv',msg.sender_user_id_) and not DevRio:get(Prox..'Rio:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
