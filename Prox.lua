@@ -3644,8 +3644,7 @@ local Prox_Msg = {
 Namebot = Prox_Msg[math.random(#Prox_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 local inline = {
-{{text="᥀ المطور .",url="t.me/"..(dp.username_ or "X_G_33")}},
-{{text="᥀ السورس .",url="https://t.me/X_G_33"},{text="᥀ لتنصيب بوت .",url="https://t.me/siria100"}},{{text="᥀ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+{{text="᥀ السورس .",url="https://t.me/X_G_33"},{text="᥀ لتنصيب بوت .",url="https://t.me/siria100"}},
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
