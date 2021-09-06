@@ -3643,8 +3643,10 @@ local Prox_Msg = {
 } 
 Namebot = Prox_Msg[math.random(#Prox_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},} 
+local inline = {
+{{text="᥀ المطور .",url="t.me/"..(dp.username_ or "X_G_33")}},
+{{text="᥀ السورس .",url="https://t.me/X_G_33"},{text="᥀ لتنصيب بوت .",url="https://t.me/siria100"}},{{text="᥀ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+}
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
 https.request("https://api.telegram.org/bot"..tokenbot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
