@@ -3638,7 +3638,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا')
-local ProxTeam = {' قول يسطا انا'..NameBot..' ',' اسمي '..NameBot..' ',' منتا شايف اسمي'..NameBot..' '}
+local ProxTeam = {' قول يسطا انا'..NameBot..' ',' اسمي '..NameBot..' ','  منتا شايف اسمي'..NameBot..' '}
 DevRio2 = math.random(#ProxTeam) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, ProxTeam[DevRio2] , 1, 'html') 
 return false
