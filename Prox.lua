@@ -2160,7 +2160,7 @@ keyboard.inline_keyboard = {
 {{text="Atomic 1▶️",url='https://t.me/gamee?game=AtomicDrop1'},{text="Corsairs",url='https://t.me/gamebot?game=Corsairs'}},
 {{text="LumberJack",url='https://t.me/gamebot?game=LumberJack'}},
 {{text="LittlePlane",url='https://t.me/gamee?game=LittlePlane'},{text="RollerDisco",url='https://t.me/gamee?game=RollerDisco'}},
-{{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=Prox'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},
+{{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},
 {{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
 {{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
 {{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},
@@ -3636,35 +3636,24 @@ end
 end 
 --     Source Prox     --
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
-if text == "بوت" or text == 'البوت' then 
-local Namebot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا') 
-local Prox_Msg = { 
-'◉ اي ياروحي انا '..Namebot..'😸🦋',
-} 
-Namebot = Prox_Msg[math.random(#Prox_Msg)] 
-local msg_id = msg.id_/2097152/0.5  
-local inline = {
-{{text="᥀ السورس .",url="https://t.me/X_G_33"},{text="᥀ لتنصيب بوت .",url="https://t.me/siria100"}},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..tokenbot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
-end 
-end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+if text == 'بوت' or text == 'بوتت' then 
+NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا')
+local ProxTeam = {' قول يسطا انا'..NameBot..' ',' اسمي '..NameBot..' ',' منتا شايف اسمي'..NameBot..' '}
+DevRio2 = math.random(#ProxTeam) 
+Dev_Rio(msg.chat_id_, msg.id_, 1, ProxTeam[DevRio2] , 1, 'html') 
+return false
 end
+
 if text == 'اسم البوت' or text == 'البوت شنو اسمه' or text == 'شسمه البوت' or text == 'البوت شسمه' then
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا') 
-local ProxTeam = {"اسمي القميل "..NameBot.." "} 
+local ProxTeam = {"منتا شايف اسمي"..NameBot.." "} 
 DevRio2 = math.random(#ProxTeam) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, ProxTeam[DevRio2] , 1, 'html') 
 return false
 end
 if text and text == (DevRio:get(Prox..'Rio:NameBot') or 'سوريا') then 
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا')
-local namebot = {'كول حبيبي ؟ اني '..NameBot..' ',' وياك القميل '..NameBot..' '} 
+local namebot = {'قول يسطا انا'..NameBot..' ',' اسمي '..NameBot..' '} 
 name = math.random(#namebot) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'html') 
 return false 
