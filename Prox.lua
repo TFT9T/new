@@ -1964,7 +1964,6 @@ DevRio:setex(Prox..'Rio:Start:Time'..msg.sender_user_id_,300,true)
 return false
 end 
 if text == "المطور" or text == "مطور" then
-local TEXT_SUD = DevRio:get(DevId..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
