@@ -2097,19 +2097,14 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, ''..ProxTeam[math.random(#ProxTeam)]..'' , 1, 
 return false
 end
 --     Source Prox     --
-if text == 'المطور' or text == 'مطور' then
-tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result) 
- 
- local msg_id = msg.id_/2097152/0.5
-local Text = [[
- المطور
-]]
+if text and (text == 'المطور' or text == 'مطور' or text == '↫  المطور ♡') and not DevRio:get(Prox..'Rio:Devinline:Pv'..msg.chat_id_) then
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
+local msg_id = msg.id_/2097152/0.5
+Text = "*♡︙𝑑𝑒𝑣 𝑛𝑎𝑚𝑒 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*♡︙𝑑𝑒𝑣𝑒𝑙𝑜𝑝𝑒𝑟  ↬* [@"..result.username_.."]"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '  💅 ⁽'..result.first_name_..'₎ 💅 ',url="t.me/"..result.username_}},}
-https.request("https://api.telegram.org/bot"..tokenbot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or X_G_33}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
-
-
 end
 --     Source Prox     --
 if text == "معرفي" and ChCheck(msg) or text == "↫  معرفي ♡" and ChCheck(msg) then
