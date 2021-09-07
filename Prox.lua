@@ -10308,7 +10308,7 @@ io.popen('rm -rf ./GroupsBot.txt')
 end
 end
 end
-if text == 'جلب المشتركين' and DevRio(msg) then 
+if text == 'جلب المشتركين' and RioSudo(msg) then 
 local list = DevRio:smembers(Rio..'User_Bot') 
 local t = '{"users":['   
 for k,v in pairs(list) do 
