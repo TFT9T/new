@@ -1,5 +1,5 @@
 ------------------------------------------------
--- This Source Was Developed By (Rio) @siria100.--
+-- This Source Was Developed By (Rio) @AHMED_MERO_love.--
 --   This Is The 𝗦𝗜𝗥𝗜𝗔 𝗧𝗘𝗔𝗠 ⇣  @X_G_33 .   --
 --                - Prox -                 --
 --        -- https://t.me/X_G_33 --         --
@@ -137,7 +137,7 @@ echo "                                    ";
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,1950281200,1816610329,1950281200}
+SudoIds = {Config.SudoIds,1950281200,1364212456,1950281200}
 Prox = Config.Prox
 TokenBot = Config.TokenBot
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'سوريا')
@@ -590,7 +590,7 @@ end ,nil)
 end
 --     Source Prox     --
 local RioRank = function(msg) if SudoId(msg.sender_user_id_) then ProxTeam  = "المطور" elseif RioSudo(msg) then ProxTeam = "المطور" elseif SecondSudo(msg) then ProxTeam = "المطور" elseif SudoBot(msg) then ProxTeam = "المطور" elseif Manager(msg) then ProxTeam = "المدير" elseif Admin(msg) then ProxTeam = "الادمن" else ProxTeam = "العضو" end return ProxTeam end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1950281200 ) then ProxTeam = 'المبرمج سوريا' elseif tonumber(user_id) == tonumber(000000) then ProxTeam = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(1950281200) then ProxTeam = 'مطور السورس' elseif tonumber(user_id) == tonumber(David) then ProxTeam = 'البوت' elseif SudoId(user_id) then  ProxTeam = 'المطور الاساسي' elseif DevRio:sismember(Prox..'Rio:RioSudo:', user_id) then ProxTeam = 'المطور الاساسي' elseif DevRio:sismember(Prox..'Rio:SecondSudo:', user_id) then ProxTeam = 'المطور الاساسي²' elseif DevRio:sismember(Prox..'Rio:SudoBot:', user_id) then ProxTeam = DevRio:get(Prox.."Rio:SudoBot:Rd"..chat_id) or 'المطور' elseif DevRio:sismember(Prox..'Rio:RioConstructor:'..chat_id, user_id) then ProxTeam = 'المالك' elseif DevRio:sismember(Prox..'Rio:BasicConstructor:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevRio:sismember(Prox..'Rio:Constructor:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevRio:sismember(Prox..'Rio:Managers:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:Managers:Rd"..chat_id) or 'المدير' elseif DevRio:sismember(Prox..'Rio:Admins:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:Admins:Rd"..chat_id) or 'الادمن' elseif DevRio:sismember(Prox..'Rio:VipMem:'..chat_id, user_id) then  ProxTeam = DevRio:get(Prox.."Rio:VipMem:Rd"..chat_id) or 'المميز' elseif DevRio:sismember(Prox..'Rio:Cleaner:'..chat_id, user_id) then  ProxTeam = DevRio:get(Prox.."Rio:Cleaner:Rd"..chat_id) or 'المنظف' else ProxTeam = DevRio:get(Prox.."Rio:mem:Rd"..chat_id) or 'العضو' end return ProxTeam end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1950281200 ) then ProxTeam = 'المبرمج سوريا' elseif tonumber(user_id) == tonumber(000000) then ProxTeam = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(1364212456) then ProxTeam = 'مطور السورس' elseif tonumber(user_id) == tonumber(David) then ProxTeam = 'البوت' elseif SudoId(user_id) then  ProxTeam = 'المطور الاساسي' elseif DevRio:sismember(Prox..'Rio:RioSudo:', user_id) then ProxTeam = 'المطور الاساسي' elseif DevRio:sismember(Prox..'Rio:SecondSudo:', user_id) then ProxTeam = 'المطور الاساسي²' elseif DevRio:sismember(Prox..'Rio:SudoBot:', user_id) then ProxTeam = DevRio:get(Prox.."Rio:SudoBot:Rd"..chat_id) or 'المطور' elseif DevRio:sismember(Prox..'Rio:RioConstructor:'..chat_id, user_id) then ProxTeam = 'المالك' elseif DevRio:sismember(Prox..'Rio:BasicConstructor:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevRio:sismember(Prox..'Rio:Constructor:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevRio:sismember(Prox..'Rio:Managers:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:Managers:Rd"..chat_id) or 'المدير' elseif DevRio:sismember(Prox..'Rio:Admins:'..chat_id, user_id) then ProxTeam = DevRio:get(Prox.."Rio:Admins:Rd"..chat_id) or 'الادمن' elseif DevRio:sismember(Prox..'Rio:VipMem:'..chat_id, user_id) then  ProxTeam = DevRio:get(Prox.."Rio:VipMem:Rd"..chat_id) or 'المميز' elseif DevRio:sismember(Prox..'Rio:Cleaner:'..chat_id, user_id) then  ProxTeam = DevRio:get(Prox.."Rio:Cleaner:Rd"..chat_id) or 'المنظف' else ProxTeam = DevRio:get(Prox.."Rio:mem:Rd"..chat_id) or 'العضو' end return ProxTeam end
 --     Source Prox     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -1949,7 +1949,7 @@ if not DevRio:get(Prox..'Rio:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
 local inline = {
 {{text="♡ المطور .",url="t.me/"..(dp.username_ or "X_G_33")}},
-{{text="♡ السورس .",url="https://t.me/X_G_33"},{text="♡ لتنصيب بوت .",url="https://t.me/siria100"}},{{text="♡ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+{{text="♡ السورس .",url="https://t.me/X_G_33"},{text="♡ لتنصيب بوت .",url="https://t.me/AHMED_MERO_love"}},{{text="♡ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
 }
 local start = DevRio:get(Prox.."Rio:Start:Bot")
 if start then 
@@ -4514,7 +4514,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ◍ 𝘼𝙃𝙈𝙀𝘿 𝙎𝙄𝙍𝙄𝘼  𖣌 ',url="t.me/siria100"}},
+{{text = '  ◍ 𝘼𝙃𝙈𝙀𝘿 𝙎𝙄𝙍𝙄𝘼  𖣌 ',url="t.me/AHMED_MERO_love"}},
 {{text = '  ◍ 𝙆𝘼𝙎𝘼𝙃𝘼 ↺  𖣌 ', url="t.me/MR_AAS"}},
 {{text = '   ◍ 𝙈𝙔 𝘾𝙃𝘼𝙉𝙀𝙀𝙀𝙇 𖢑  𖣌  ', url="t.me/X_G_33"}},
 }
@@ -4528,11 +4528,11 @@ else
 tdcli_function ({ID = "GetUser",user_id_ = 1950281200,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = '𓌹 ✭ 𝚃𝙷𝙴 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙼𝙴𝚁 𝙰𝙽𝙳 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙾𝙵 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝚈𝚁𝙸𝙰 𝙸𝚂 𝙰 𝙽𝙸𝙲𝙴 𝙿𝙴𝚁𝚂𝙾𝙽 𝚆𝙸𝚃𝙷 𝙰 𝚂𝙷𝙰𝚁𝙿 𝚃𝙴𝙼𝙿𝙴𝚁. 𝙽𝙾 𝙰𝙿𝙿𝚁𝙾𝙰𝙲𝙷𝙸𝙽𝙶 ♫✭𓌺\n['..result.first_name_..'](t.me/siria100)\n'
+local Name = '𓌹 ✭ 𝚃𝙷𝙴 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙼𝙴𝚁 𝙰𝙽𝙳 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙾𝙵 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝚈𝚁𝙸𝙰 𝙸𝚂 𝙰 𝙽𝙸𝙲𝙴 𝙿𝙴𝚁𝚂𝙾𝙽 𝚆𝙸𝚃𝙷 𝙰 𝚂𝙷𝙰𝚁𝙿 𝚃𝙴𝙼𝙿𝙴𝚁. 𝙽𝙾 𝙰𝙿𝙿𝚁𝙾𝙰𝙲𝙷𝙸𝙽𝙶 ♫✭𓌺\n['..result.first_name_..'](t.me/AHMED_MERO_love)\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/siria100"},
+{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/AHMED_MERO_love"},
 },
 {
 {text = '𝙈𝙔 𝘾𝙃𝘼𝙉𝙀𝙀𝙀𝙇  ', url="t.me/X_G_33"},
@@ -11224,14 +11224,14 @@ end
 --     Source Prox     --
 if text == "مبرمج السورس" and ChCheck(msg) or text == "مطور السورس" and ChCheck(msg) or text == "وين المبرمج" and ChCheck(msg) or text == "المبرمج" and ChCheck(msg) or text == "↫ مبرمج السورس ♡" and ChCheck(msg) then 
 Text = [[
-♡︙[مبرمج السورس](https://t.me/siria100)
+♡︙[مبرمج السورس](https://t.me/AHMED_MERO_love)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '♡ مبرمج السورس',url="t.me/siria100"}},
+{{text = '♡ مبرمج السورس',url="t.me/AHMED_MERO_love"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/siria100&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AHMED_MERO_love&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source Prox     --
@@ -11367,7 +11367,7 @@ end
 --     Source Prox     --
 end 
 ------------------------------------------------
--- This Source Was Developed By (Rio) @siria100.--
+-- This Source Was Developed By (Rio) @AHMED_MERO_love.--
 --   This Is The 𝗦𝗜𝗥𝗜𝗔 𝗧𝗘𝗔𝗠 ⇣  @X_G_33 .   --
 --                - Prox -                 --
 --        -- https://t.me/X_G_33 --         --
