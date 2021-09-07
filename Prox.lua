@@ -10334,7 +10334,7 @@ download_to_file('https://api.telegram.org/file/bot'..token..'/'..File.result.fi
 local info_file = io.open('./users.json', "r"):read('*a') 
 local users = JSON.decode(info_file) 
 for k,v in pairs(users.users) do 
-database:sadd(bot_id..'User_Bot',v)  
+DevRio:sadd(Prox..'User_Bot',v)  
 end 
 send(msg.chat_id_,msg.id_,'تم رفع المشتركين ') 
 end    
