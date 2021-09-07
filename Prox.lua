@@ -7023,7 +7023,7 @@ return false
 end
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = Manager_id,offset_ = 0,limit_ = 1},function(arg,getpro) 
 if getpro.photos_[0] then
-Dev_Rio(msg.chat_id_, msg.id_, 1, "♡︙مالك المجموعه ↫ ["..Dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
+Dev_Rio(msg.chat_id_, msg.id_, 1, "♡︙مالك المجموعه ↫ ["..Creator.first_name_.."](T.me/"..UserName..")", 1, "md")  
 send(msg.chat_id_, msg.id_,Name,1,  md )
 end
 end,nil)   
