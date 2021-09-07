@@ -1977,7 +1977,7 @@ return false
 end;end;end,nil);end,nil);end,nil);end
 if SecondSudo(msg) and msg.reply_to_message_id_ ~= 0  then    
 tdcli_function({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)},function(extra, result, success) 
-if result.forwards_info_.sender_user_id_ then     
+if result.forward_info_.sender_user_id_ then     
 id_user = result.forward_info_.sender_user_id_    
 end 
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
@@ -2127,7 +2127,7 @@ end
 if text == 'نبذتي' and ChCheck(msg) or text == 'بايو' and ChCheck(msg) or text == '↫  نبذتي ♡' and ChCheck(msg) then
 send(msg.chat_id_, msg.id_,'['..GetBio(msg.sender_user_id_)..']')
 end
-if text == "صورتي" or text == "↫ صورتي ♡" then
+if text == "صورتي" or text == "المنشئئ" then
 local my_ph = DevRio:get(Prox.."Rio:Photo:Profile"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_," ♡︙الصوره معطله") 
@@ -2139,7 +2139,7 @@ sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.p
 else
 send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
 end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
+tdcli_function ({ ID = "GetDpPhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
 --     Source Prox     --
 if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "↫ الالعاب المتطوره ♡" then
@@ -6993,10 +6993,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 end 
 if text ==("المنشئ") and ChCheck(msg) or text ==("المالك") and ChCheck(msg) then
-local function getpro(extra, result, success)
-if result.photos_[0] then
-tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data)
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
+tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
 for i=0 , #admins do
 if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
@@ -7013,7 +7010,6 @@ end
 end
 end,nil)   
 end
-
 --     Source Prox     --
 if Admin(msg) then
 if text == "المكتومين" and ChCheck(msg) then 
@@ -10328,23 +10324,7 @@ File:write(t)
 File:close() 
 sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './users.json', ' عدد المشتركين { '..#list..'}') 
 end
-if text == 'رفع المشتركين' and RioSudo(msg) then 
-function by_reply(extra, result, success)    
-if result.content_.document_ then  
-local ID_FILE = result.content_.document_.document_.persistent_id_  
-local File_Name = result.content_.document_.file_name_ 
-local File = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..ID_FILE) )  
-download_to_file('https://api.telegram.org/file/bot'..token..'/'..File.result.file_path, ''..File_Name)  
-local info_file = io.open('./users.json', "r"):read('*a') 
-local users = JSON.decode(info_file) 
-for k,v in pairs(users.users) do 
-DevRio:sadd(Prox..'User_Bot',v)  
-end 
-send(msg.chat_id_,msg.id_,'تم رفع المشتركين ') 
-end    
-end 
-tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
-end
+
 --     Source Prox     --
 if text == "اذاعه خاص" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه خاص ♡" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevRio:get(Prox.."Rio:Send:Bot"..Prox) and not SecondSudo(msg) then 
