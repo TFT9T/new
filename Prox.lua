@@ -7023,12 +7023,11 @@ return false
 end
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = Manager_id,offset_ = 0,limit_ = 1},function(arg,getpro) 
 if getpro.photos_[0] then
-Name =   • المنشئ [ ..dp.first_name_.. ](tg://user?id= ..dp.id_.. )\n 
-Name = Name.. • البايو [ ..getbio(owner_id).. ]\n 
+Dev_Rio(msg.chat_id_, msg.id_, 1, "♡︙مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
 keyboard = {}
 keyboard.inline_keyboard = {{{text =   ..dp.first_name_..  , url = "https://t.me/"..dp.username_..""}},}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.. /sendPhoto?chat_id= ..msg.chat_id_.. &caption= ..URL.escape(Name).. &photo= ..getpro.photos_[0].sizes_[1].photo_.persistent_id_.. &reply_to_message_id= ..msg_id.. &parse_mode=markdown&disable_web_page_preview=true&reply_markup= ..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..tokenbot.. /sendPhoto?chat_id= ..msg.chat_id_.. &caption= ..URL.escape(Name).. &photo= ..getpro.photos_[0].sizes_[1].photo_.persistent_id_.. &reply_to_message_id= ..msg_id.. &parse_mode=markdown&disable_web_page_preview=true&reply_markup= ..JSON.encode(keyboard)) 
 else
 
 send(msg.chat_id_, msg.id_,Name,1,  md )
