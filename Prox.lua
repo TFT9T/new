@@ -10309,7 +10309,7 @@ end
 end
 end
 if text == 'جلب المشتركين' and DevRio(msg) then 
-local list = DevRio:smembers(Prox.."Rio:Users') 
+local list = DevRio:smembers(Rio..'User_Bot') 
 local t = '{"users":['   
 for k,v in pairs(list) do 
 if k == 1 then 
