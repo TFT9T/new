@@ -10324,6 +10324,23 @@ File:write(t)
 File:close() 
 sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './users.json', ' عدد المشتركين { '..#list..'}') 
 end
+if text == 'رفع المشتركين' and RioSudo(msg) then 
+function by_reply(extra, result, success)    
+if result.content_.document_ then  
+local ID_FILE = result.content_.document_.document_.persistent_id_  
+local File_Name = result.content_.document_.file_name_ 
+local File = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..ID_FILE) )  
+download_to_file('https://api.telegram.org/file/bot'..token..'/'..File.result.file_path, ''..File_Name)  
+local info_file = io.open('./users.json', "r"):read('*a') 
+local users = JSON.decode(info_file) 
+for k,v in pairs(users.users) do 
+database:sadd(bot_id..'User_Bot',v)  
+end 
+send(msg.chat_id_,msg.id_,'تم رفع المشتركين ') 
+end    
+end 
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
+end
 --     Source Prox     --
 if text == "اذاعه خاص" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه خاص ♡" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevRio:get(Prox.."Rio:Send:Bot"..Prox) and not SecondSudo(msg) then 
