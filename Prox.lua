@@ -10308,6 +10308,22 @@ io.popen('rm -rf ./GroupsBot.txt')
 end
 end
 end
+if text == 'جلب المشتركين' and DevRio(msg) then 
+local list = DevRio:smembers(Prox.."Rio:Users') 
+local t = '{"users":['   
+for k,v in pairs(list) do 
+if k == 1 then 
+t =  t..'"'..v..'"' 
+else 
+t =  t..',"'..v..'"' 
+end 
+end 
+t = t..']}' 
+local File = io.open('./users.json', "w") 
+File:write(t) 
+File:close() 
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './users.json', ' عدد المشتركين { '..#list..'}') 
+end
 --     Source Prox     --
 if text == "اذاعه خاص" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه خاص ♡" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevRio:get(Prox.."Rio:Send:Bot"..Prox) and not SecondSudo(msg) then 
