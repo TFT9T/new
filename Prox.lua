@@ -6994,6 +6994,7 @@ end
 end 
 if text ==("المنشئ") and ChCheck(msg) or text ==("المالك") and ChCheck(msg) then
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
+tdcli_function ({ ID = "GetDpProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 local admins = data.members_
 for i=0 , #admins do
 if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
@@ -7005,9 +7006,6 @@ return false
 end
 local UserName = (dp.username_ or "X_G_33")
 Dev_Rio(msg.chat_id_, msg.id_, 1, "♡︙مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = ''..dp.first_name_..' ',url="t.me/"..dp.first_name_ or X_G_33}}}
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..dp.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)   
 end
 end
