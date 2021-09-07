@@ -2135,11 +2135,11 @@ return false
 end
 local function getpro(extra, result, success)
 if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ♡︙عدد صورك ↫ "..result.total_count_.." صوره‌‏", msg.id_, msg.id_, "md")
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.Manager_id," ♡︙عدد صورك ↫ "..result.total_count_.." صوره‌‏", msg.id_, msg.id_, "md")
 else
 send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
 end end
-tdcli_function ({ ID = "GetUserProfilePhotos", Manager_id = msg.sender_Manager_id, offset_ = 0, limit_ = 1 }, getpro, nil)
+tdcli_function ({ ID = "GetUserProfilePhotos", Manager_id = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
 --     Source Prox     --
 if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "↫ الالعاب المتطوره ♡" then
@@ -3608,7 +3608,7 @@ if not DevRio:get(Prox.."Rio:Lock:GpLinksinline"..msg.chat_id_) then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or DevRio:get(Prox.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local Text = '♡︙𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n['..ta.title_..']('..linkgpp.result..')'
+local Text = '♡︙??𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n['..ta.title_..']('..linkgpp.result..')'
 local inline = {{{text = ta.title_, url=linkgpp.result}},
 } 
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5) 
