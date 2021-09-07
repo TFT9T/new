@@ -4866,6 +4866,26 @@ Text = [[
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
+if text == 'حصل' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '《𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 》', url="t.me/X_G_33"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..tokenbot..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ahmedsiria/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'انا جيت' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = ' 《𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 》', url="t.me/X_G_33"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..tokenbot..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/ahmedsiria/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 --     Source Prox     --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == "اطردني" and ChCheck(msg) or text == "ادفرني" and ChCheck(msg) then
