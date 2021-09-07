@@ -1976,7 +1976,8 @@ SendText(DevId,'♡︙تم ارسال الملصق من ↫ ⤈\n['..string.sub(
 return false
 end;end;end,nil);end,nil);end,nil);end
 if SecondSudo(msg) and msg.reply_to_message_id_ ~= 0  then    
-tdcli_function({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)},function(extra, result, success)      
+tdcli_function({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)},function(extra, result, success) 
+if result.forwards_info_.sender_user_id_ then     
 id_user = result.forward_info_.sender_user_id_    
 end 
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
