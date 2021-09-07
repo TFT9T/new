@@ -7006,7 +7006,7 @@ end
 local UserName = (dp.username_ or "X_G_33")
 Dev_Rio(msg.chat_id_, msg.id_, 1, "♡︙مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = ''..dp.username_..' ',url="t.me/"..dp.first_name_ or X_G_33}}}
+keyboard.inline_keyboard = {{{text = ''..dp.first_name_..' ',url="t.me/"..dp.first_name_ or X_G_33}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..dp.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)   
 end
