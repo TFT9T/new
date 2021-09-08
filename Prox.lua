@@ -7022,6 +7022,7 @@ send(msg.chat_id_, msg.id_,"  • حساب المنشئ محذوف")
 return false  
 end
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = Manager_id,offset_ = 0,limit_ = 1},function(arg,getpro) 
+local function taha(extra, taha, success)
 if getpro.photos_[0] then
 keyboard = {}
 keyboard.inline_keyboard = {{{text = '  ..b.first_name_..'  , url = "https://t.me/"..b.username_..""}},}
