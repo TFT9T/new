@@ -7031,8 +7031,6 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..m
 else
 send(msg.chat_id_, msg.id_,Name,1,  md )
 end
-end,nil)   
-end,nil)   
 end
 end
 end,nil)  
