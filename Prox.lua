@@ -7022,16 +7022,16 @@ send(msg.chat_id_, msg.id_,"  • حساب المنشئ محذوف")
 return false  
 end
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = Manager_id,offset_ = 0,limit_ = 1},function(arg,getpro) 
-local function taha(extra, taha, success)
 if getpro.photos_[0] then
 keyboard = {}
 keyboard.inline_keyboard = {{{text = '  ..b.first_name_..'  , url = "https://t.me/"..b.username_..""}},}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 send(msg.chat_id_, msg.id_,Name,1,  md )
 end
-end
+end,nil)   
+end,nil)   
 end
 end
 end,nil)  
