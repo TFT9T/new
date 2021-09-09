@@ -3748,7 +3748,7 @@ if not Mod(msg) then
 send(msg.chat_id_, msg.id_,' ● هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
 return false
 end
-local text =[[
+local Text =[[
 ● اهلا بك في قسم الاوامر ..↑↓
 اختر الامر الذي تريدها .↑↓
 ده من الازرار بلاسفل . ↓
@@ -16809,12 +16809,12 @@ local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local text = data.payload_.data_
-Ok_id  = Text:match("(%d+)")  
+Ok_id  = text:match("(%d+)")  
 if text == 'okCaptcha'..data.sender_user_id_ then  
 DeleteMessage(Chat_id, {[0] = Msg_id}) 
 return https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id="..Ok_id .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 end
-if text == '/ven3' then
+if text == '/ven3' then 
 if not CoSu(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
