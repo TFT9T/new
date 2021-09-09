@@ -21436,31 +21436,29 @@ send(msg.chat_id_, msg.id_,'['..LEADER_Msg[math.random(#LEADER_Msg)]..']')
 return false
 end
 end
-if text == "ميرو" or text == "مطور" then
-local TEXT_SUD = bot_data:get(ban_id..'TEXT_SUDO')
-if TEXT_SUDO then 
-send(msg.chat_id_, msg.id_,TEXT_SUDO)
-else
-tdcli_function ({ID = "GetUser",user_id_ = 1929806659,},function(arg,result) 
-local function taha(extra, taha, success)
-local Name = '𓌹 مــيــرو قـلب ســوريـا𓌺\n['..result.first_name_..'](t.me/M_R_I_O_M)\n'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/M_R_I_O_M"},
-},
-{
-{text = '𝙈𝙔 𝘾𝙃𝘼𝙉𝙀𝙀𝙀𝙇  ', url="t.me/MERO5O5"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-else 
-sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
- end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = SUDO, offset_ = 0, limit_ = 1 }, taha, nil)
-end,nil)
+if text == 'حسناء' or text == 'القمر' then  
+local Text = [[  
+✭احـلي وحده فلبنات 🌚❤️✭
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = '✭𝒉𝒂𝒔𝒏𝒂𝒂 𝒎𝒐𝒉𝒂𝒎𝒆𝒅✭',url="t.me/HASNAA828"}},  
+
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/HASNAA828&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if text == 'ميرو' or text == 'مرات سوريا' then  
+local Text = [[  
+✭مـيــرو قـلب ســوريـا✭
+]]  
+keyboard = {}   
+keyboard.inline_keyboard = {  
+{{text = '✭مــريــم✭',url="t.me/M_R_I_O_M"}},  
+
+}  
+local msg_id = msg.id_/2097152/0.5  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_R_I_O_M&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "نسبه الانوثه" or text == "نسبه انوثه" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
