@@ -472,7 +472,6 @@ end
 return var
 end
 function SourceCh(msg) 
-local url,res = https.request('https://devdeiveddev.ml/api/tele/source/VENOM/SourceCh.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.ok ~= true then
 Var = false
@@ -1019,7 +1018,7 @@ send(msg.chat_id_, msg.id_,pre_msg)
 end
 
 --------------------------------------------------------------------------------------------------------------
-function X_G_33(msg,data) -- بداية العمل
+function SourceVENOM(msg,data) -- بداية العمل
 if msg then
 local text = msg.content_.text_
 --------------------------------------------------------------------------------------------------------------
@@ -8311,7 +8310,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if SourceCh(msg) and text == ("المدراء") and Constructor(msg) then
 local list = bot_data:smembers(ban_id..'Manager'..msg.chat_id_)
-t = "\n ● قائمة المدراء \n●○━━━━𝚜𝚒𝚛𝚒𝚊 ━━━━○●\n"
+t = "\n ● قائمة المدراء \n●○━━━━𝚜??𝚛𝚒𝚊 ━━━━○●\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -15758,7 +15757,7 @@ Msᴀɢ ~ #msgs
 🌨↓iD ⇨ #id 🌨
 🌨↓Sta ⇨  #stast 🌨
 🌨↓Msg ⇨ #msgs 🌨
-🌨↓NaMe ⇨ #name  ??
+🌨↓NaMe ⇨ #name  🌨
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
