@@ -21447,7 +21447,7 @@ local Name = '𓌹 مــيــرو قـلب ســوريـا𓌺\n['..result.fi
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"M_R_I_O_M""},
+{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/M_R_I_O_M"},
 },
 {
 {text = '𝙈𝙔 𝘾𝙃𝘼𝙉𝙀𝙀𝙀𝙇  ', url="t.me/MERO5O5"},
