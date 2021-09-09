@@ -21443,7 +21443,6 @@ send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
 tdcli_function ({ID = "GetUser",user_id_ = 1929806659,},function(arg,result) 
 local function taha(extra, taha, success)
-if taha.photos_[0] then
 local Name = '𓌹 مــيــرو قـلب ســوريـا𓌺\n['..result.first_name_..'](t.me/M_R_I_O_M)\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
