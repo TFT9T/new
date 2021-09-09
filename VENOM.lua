@@ -20083,13 +20083,13 @@ end
 
 
 
-if Text and Text:match('amr@(%d+)/user@(%d+)/setiinginfo') then
+if text and text:match('amr@(%d+)/user@(%d+)/setiinginfo') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/setiinginfo$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/voicetrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/voicetrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/voicetrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20139,7 +20139,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/voicefalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/voicefalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/voicefalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20189,7 +20189,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/managetrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/managetrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/managetrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20239,7 +20239,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/managefalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/managefalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/managefalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20289,7 +20289,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/addadmintrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/addadmintrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/addadmintrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20339,7 +20339,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/chenginfotrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/chenginfotrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/chenginfotrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20389,7 +20389,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/delmsggtrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/delmsggtrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/delmsggtrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20439,7 +20439,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/banusertrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/banusertrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/banusertrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20489,7 +20489,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/pinmsgtrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/pinmsgtrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/pinmsgtrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20539,7 +20539,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/addlinktrue') then
+if text and text:match('amr@(%d+)/user@(%d+)/addlinktrue') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/addlinktrue$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20591,7 +20591,7 @@ end
 end
 
 
-if Text and Text:match('amr@(%d+)/user@(%d+)/addadminfalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/addadminfalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/addadminfalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20643,7 +20643,7 @@ end
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/chenginfofalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/chenginfofalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/chenginfofalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20693,7 +20693,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/delmsggfalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/delmsggfalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/delmsggfalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20743,7 +20743,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/banuserfalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/banuserfalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/banuserfalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20793,7 +20793,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/pinmsgfalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/pinmsgfalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/pinmsgfalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
@@ -20843,7 +20843,7 @@ https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/addlinkfalse') then
+if text and text:match('amr@(%d+)/user@(%d+)/addlinkfalse') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/addlinkfalse$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. data.chat_id_ ..'&user_id='.. users[2])
