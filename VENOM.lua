@@ -21438,7 +21438,7 @@ end
 end
 
 if text == "ميرو" then
-local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
+local TEXT_SUD = bot_data:get(ban_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
