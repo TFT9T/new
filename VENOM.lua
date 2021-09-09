@@ -21581,7 +21581,7 @@ return false
 end    
 end   
 --------------------------------------------------------------------------------------------------------------
-SOURCEVENOM(data.message_,data)
+SourceVENOM(data.message_,data)
 plugin_VENOM(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
